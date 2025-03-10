@@ -58,6 +58,20 @@ td {
     text-align: center;
 }
 
+ul {
+    list-style-type: square; 
+    padding-left: 20px;
+}
+
+ol {
+    list-style-type: decimal; 
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 5px;
+}
+
 footer {
     background-color: #85a296;
     color: white;
