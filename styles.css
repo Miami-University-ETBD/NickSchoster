@@ -14,6 +14,39 @@ header {
     font-size: 24px;
 }
 
+nav {
+    background-color: #6f8c7c;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #85a296;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #b47c61;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -29,12 +62,49 @@ header {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#featureSelect {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #85a296;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.mechanic-item {
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-left: 5px solid #85a296;
+    margin-bottom: 5px;
+}
+
 aside {
     width: 25%;
     background-color: #b47c61;
     color: white;
     padding: 15px;
     border-radius: 10px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+aside img {
+    display: block;
+    margin: 10px auto;
+    border: 5px solid #6f8c7c; 
+    border-radius: 10px; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease-in-out;
+}
+
+aside img:hover {
+    transform: scale(1.05); 
 }
 
 table {
