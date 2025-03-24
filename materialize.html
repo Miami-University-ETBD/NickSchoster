@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bouncers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        body {
+            background-color: #dcedc8; /* Light green, nature-themed */
+        }
+        .header-bg {
+            background-color: #81c784; /* Green to match bug environment */
+        }
+        .section-bg {
+            background-color: #aed581; /* Soft green */
+        }
+        .shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .table-header {
+            background-color: #4caf50; /* Darker green for emphasis */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="header-bg">
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="content.html">Content</a></li>
+                <li><a href="materialize.html">Materialize</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="section header-bg center-align">
+        <h1 class="white-text">Welcome to Bug Bouncers!</h1>
+        <p class="white-text">Bounce, Battle, and Survive!</p>
+    </div>
+
+    <div id="about" class="section section-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h2>About the Game</h2>
+                    <p><strong>Bug Bouncers</strong> is a fast-paced, game where bugs must knock each other into the grass to pop their bubbles. Only the last bug standing wins!</p>
+                </div>
+                <div class="col s12 m6">
+                    <img src="images/bugBouncers_Intro.png" alt="Game Intro" class="responsive-img shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2>Game Features</h2>
+            <table class="highlight">
+                <thead class="table-header">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Floaty Movement</td>
+                        <td>Master floaty and bouncy movement mechanics to stay alive!</td>
+                    </tr>
+                    <tr>
+                        <td>Bubble Combat</td>
+                        <td>Knock your opponents into the grass to eliminate them.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplayer Action</td>
+                        <td>Compete with friends and test your bouncing skills.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s4">
+            <img src="images/bugBouncers_MainLevel.png" alt="Gameplay" class="responsive-img shadow">
+            <blockquote>Main Level</blockquote>
+        </div>
+        <div class="col s4">
+            <img src="images\Screenshot 2025-03-10 194255.png" alt="Game Screenshot" class="responsive-img shadow">
+            <blockquote>Battles</blockquote>
+        </div>
+        <div class="col s4">
+            <img src="images\Screenshot 2025-03-10 194304.png" alt="Bug Bouncing" class="responsive-img shadow">
+            <blockquote>Bouncing</blockquote>
+        </div>
+    </div>
+
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="images\bugBouncers_Title.png" alt="Bug Bouncer title" class="circle responsive-img">
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Bouncing bugs.  
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <iframe width="853" height="480" src="https://youtu.be/wjRtaY7cNGA" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div id="contact" class="section section-bg">
+        <div class="container">
+            <h2>Contact Us and Give Us Feedback!</h2>
+            <form>
+                <div class="input-field">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-field">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="message" class="materialize-textarea"></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn waves-effect waves-light">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="page-footer header-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p class="white-text">&copy; 2025 Bug Bouncers. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
