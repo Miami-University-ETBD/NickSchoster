@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bug Bouncers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
         body {
             background-color: #dcedc8; /* Light green, nature-themed */
@@ -86,7 +85,7 @@
 
     <div class="row">
         <div class="col s4">
-            <img src="images/bugBouncers_MainLevel.png" alt="Gameplay" class="responsive-img shadow">
+            <img src="images\bugBouncers_MainLevel.png" alt="Gameplay" class="responsive-img shadow">
             <blockquote>Main Level</blockquote>
         </div>
         <div class="col s4">
@@ -115,7 +114,7 @@
     </div>
 
     <div class="video-container">
-        <iframe width="853" height="480" src="https://youtu.be/wjRtaY7cNGA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/wjRtaY7cNGA" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div id="contact" class="section section-bg">
@@ -139,6 +138,80 @@
         </div>
     </div>
 
+    <div id="radio-section" class="section container">
+    <h2>Vote for the Next Power-Up</h2>
+    <form>
+        <p>
+            <label>
+                <input name="powerup" type="radio" value="Speed Burst" onclick="displayPowerUp()"/>
+                <span>Speed Burst</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="powerup" type="radio" value="Sticky Bubble" onclick="displayPowerUp()"/>
+                <span>Sticky Bubble</span>
+            </label>
+        </p>
+        <p>
+            <label>
+                <input name="powerup" type="radio" value="Double Bounce" onclick="displayPowerUp()"/>
+                <span>Double Bounce</span>
+            </label>
+        </p>
+    </form>
+    <div id="powerup-response"></div>
+</div>
+
+
+    <div id="feedback-section" class="section container">
+        <h2>Subscribe for Game Development Updates</h2>
+        <form onsubmit="submitEmail(event)">
+            <div class="input-field">
+                <input id="email" type="email" required>
+                <label for="email">Email</label>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+        </form>
+        <div id="email-response"></div>
+    </div>
+ <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Check Your email-response</h4>
+        <p id="modal-content-text"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+          >Close</a
+        >
+      </div>
+    </div>
+
+    
+ 
+    <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="images\bugBouncers_Intro.png"></a>
+        <a class="carousel-item" href="#two!"><img src="images\bugBouncers_MainLevel.png"></a>
+        <a class="carousel-item" href="#three!"><img src="images\bugBouncers_Title.png"></a>
+        <a class="carousel-item" href="#four!"><img src="images\AIBug.png"></a>
+        <a class="carousel-item" href="#five!"><img src="images\AIPowerUp.png"></a>
+      </div>
+
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">Future Goals</i></div>
+          <div class="collapsible-body"><span>Our current goals with Bug Bouncers is to get it published on multiple platforms and make significant expansions to the currently provided levels.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">FAQ's</i></div>
+          <div class="collapsible-body"><span>Why Bug Bouncers? -Bug Bouncers came about from the 2025 Global Game Jam theme of "Bubble".</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">Credits</i></div>
+          <div class="collapsible-body"><span>All assets and code for Bug Bouncers were created by Nick Schoster.</span></div>
+        </li>
+      </ul>
+
     <footer class="page-footer header-bg">
         <div class="container">
             <div class="row">
@@ -148,5 +221,40 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Initialize modal
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+
+            var carousels = document.querySelectorAll('.carousel');
+            M.Carousel.init(carousels);
+            var collapsibles = document.querySelectorAll('.collapsible');
+            M.Collapsible.init(collapsibles);
+        });
+ 
+ 
+        // Function to display selected pastry
+        function displayPowerUp() {
+    const selected = document.querySelector('input[name="powerup"]:checked').value;
+    document.getElementById('powerup-response').innerText = `You voted for: ${selected}! Stay tuned for future updates.`;
+}
+        // Function to handle email subscription form submission
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+            document.getElementById('email').value = ''; // Clear the input
+ 
+ 
+            // Display modal
+            const modalText = document.getElementById('modal-content-text');
+            modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+            const modal = M.Modal.getInstance(document.getElementById('modal1'));
+            modal.open();
+        }
+    </script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
