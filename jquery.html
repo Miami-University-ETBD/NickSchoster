@@ -5,21 +5,37 @@
 <script>
     $(document).ready(function(){
       $("#hide").click(function(){
-        $("p").hide();
+        $("h1").hide();
       });
       $("#show").click(function(){
-        $("p").show();
+        $("h1").show();
       });
     });
     </script>
+    <script>
+      $(document).ready(function(){
+        $("#fadeButton").click(function(){
+          $("#div1").fadeToggle();
+          $("#div2").fadeToggle("slow");
+          $("#div3").fadeToggle(1000);
+        });
+      });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $("#p1").mousedown(function(){
+            alert("You can guide enemies into the grass!");
+          });
+        });
+        </script>
 </head>
 <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delicious Bakery</title>
+<title>Bug Bouncers</title>
 </head>
 <body>
 <!-- Header of the website -->
 <header>
-   <h1>Welcome to Delicious Bakery</h1>
+   <h1>Welcome to Bug Bouncers</h1>
   
    <div class="navbar">
     <li><a href="index.html">Home</a></li>
@@ -32,11 +48,28 @@
 
 </header>
 <section style="background-color: #f1a1e8;">
-    <p>If you click on the "Hide" button, I will disappear.</p>
+    <h1>Try playing the game with friends!</h1>
 
 <button id="hide">Hide</button>
 <button id="show">Show</button>
 </section>
+
+  <section style="background-color: #19c284;">
+    <p>Play through multiple different scenarios.</p>
+  
+  <button id="fadeButton">Click to fade in/out pictures of the game!</button><br><br>
+  
+  <div id="div1" ><img src="images/bugBouncers_MainLevel.png" alt="Bug Bouncers Title" style="width:100%; max-width:300px;"></div>
+  <br>
+  <div id="div2" > <img src="images/bugBouncers_Intro.png" alt="Bug Bouncers Title" style="width:100%; max-width:300px;"></div>
+  <br>
+  <div id="div3"> <img src="images\Screenshot 2025-03-10 194255.png" alt="Bug Bouncers Title" style="width:100%; max-width:300px;"> </div>
+  
+  
+  </section>
+  <section style="background-color: #99730a;">
+    <p id="p1">Click for a tip on the game.</p>
+  </section>
 
 </body>
 </html>
